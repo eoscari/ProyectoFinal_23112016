@@ -11,4 +11,9 @@ public partial class MiCuenta : System.Web.UI.Page
     {
 
     }
+
+    protected void Alta(object sender, EventArgs e)
+    {
+
+    }
 }

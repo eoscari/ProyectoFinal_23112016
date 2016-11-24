@@ -10,20 +10,20 @@ public class ClsCuenta
     private double DepBancario;//cantidad de dinero en la cuenta bancaria
     private string CuentaBancaria;
     private double ChequesCobrados;
-    private double ChequesDebitados;
+
    // private DateTime Fecha;
 
 
     public ClsCuenta() { }
 
-    public ClsCuenta(double FD,double FP, double DB,string CB, double CC, double CD)
+    public ClsCuenta(double FD,double FP, double DB,string CB, double CC)
     {
         this.FondoDolares = FD;
         this.FondoPesos = FP;
         this.DepBancario = DB;
         this.CuentaBancaria = CB;
         this.ChequesCobrados = CC;
-        this.ChequesDebitados = CD;
+
         //this.Fecha = fe;
     }
   
@@ -53,11 +53,7 @@ public class ClsCuenta
         get { return ChequesCobrados; }
         set { ChequesCobrados = value; }
     }
-    public double SGCheqDebitados
-    {
-        get { return ChequesDebitados; }
-        set { ChequesDebitados = value; }
-    }
+
     public int TamCuenta {
     get { return  ((5 * 16)+16+SGCuentaBanc.Length*2); } }
 }

@@ -9,15 +9,36 @@
     <div class="form-horizontal">
         <h4>Nueva Nota</h4>
         <hr />
-        <asp:ValidationSummary runat="server" CssClass="text-danger" />
+        
         <div class="form-group">
-            <asp:Label runat="server" AssociatedControlID="TipoNota" CssClass="col-md-2 control-label">Tipo Nota</asp:Label>
+            <asp:Label runat="server" AssociatedControlID="idFactura" CssClass="col-md-2 control-label">Id Factura de la cual Corresponde</asp:Label>
             <div class="col-md-10">
-                <asp:TextBox runat="server" ID="TipoNota" CssClass="form-control" OnTextChanged="TipoNota_TextChanged" />
-                <asp:RequiredFieldValidator runat="server" ControlToValidate="TipoNota"
+                <asp:TextBox runat="server" ID="idFactura" CssClass="form-control"  />
+                <asp:RequiredFieldValidator runat="server" ControlToValidate="idFactura"
                     CssClass="text-danger" ErrorMessage="Se requiere el Tipo de Nota." />
             </div>
         </div>   
+
+
+         <div class="form-group">
+            <asp:Label runat="server" AssociatedControlID="idtipo" CssClass="col-md-2 control-label" ID="idtipo">Tipo</asp:Label>
+            <div class="col-md-10">
+                <asp:DropDownList ID="ComboTipo" runat="server" CssClass="form-control">
+                    <asp:ListItem>Credito</asp:ListItem>
+                    <asp:ListItem>Debito</asp:ListItem>
+                   
+                </asp:DropDownList>
+            </div>
+        </div>
+                <div class="form-group">
+            <asp:Label runat="server" AssociatedControlID="idNota" CssClass="col-md-2 control-label">Id Nota</asp:Label>
+            <div class="col-md-10">
+                <asp:TextBox runat="server" ID="idNota" CssClass="form-control"  />
+                <asp:RequiredFieldValidator runat="server" ControlToValidate="idNota"
+                    CssClass="text-danger" ErrorMessage="Se requiere el Tipo de Nota." />
+            </div>
+        </div>   
+
         <div class="form-group">
             <asp:Label runat="server" AssociatedControlID="Monto" CssClass="col-md-2 control-label">Monto</asp:Label>
             <div class="col-md-10">

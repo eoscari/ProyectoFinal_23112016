@@ -54,8 +54,8 @@ public class ListaNotas
                 {
                     bw.BaseStream.Seek(i * tamañoReg, SeekOrigin.Begin);
                     bw.Write(obj.IdNota);
-                    bw.Write(obj.Tipo.ToString());
-                    bw.Write(obj.Fecha.ToString());
+                    bw.Write(obj.Tipo);
+                    bw.Write(Formato(obj.Fecha));
                     bw.Write(obj.Monto);
                     return true;
                 }
@@ -74,7 +74,10 @@ public class ListaNotas
     public int NúmeroDeRegs() //devuelve número de registros
     { 
         return nregs; 
-    } 
+    }
+    public string Formato(DateTime dia) {
+        return dia.ToString("dd/MM/yyyy");
+    }
 
     public clsNota LeerReg(int i)
     {
