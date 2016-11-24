@@ -23,7 +23,7 @@ public partial class ABMClientes : System.Web.UI.Page
         {
             lista.AbrirFichero(Server.MapPath(@"~/Archivos/Clientes.bin"));
        
-            int idcli = Convert.ToInt32(IdCliente.Text);
+         
             string nom = Nombre.Text;
             string ape = Apellido.Text;
             long Dni = long.Parse(dni.Text);

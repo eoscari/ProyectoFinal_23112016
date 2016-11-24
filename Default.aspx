@@ -21,7 +21,7 @@ Cabe destacar, que el cash flow es un estado contable que presenta información 
                 llenas los campos requeridos y Aceptar.
             </p>
             <p>
-                <a class="btn btn-default" href="#">Ir Directo a Mi Cuenta.. &raquo;</a>
+                <a class="btn btn-default" href="MiCuenta">Ir Directo a Mi Cuenta.. &raquo;</a>
             </p>
         </div>
         <div class="col-md-4">
@@ -37,9 +37,10 @@ Cabe destacar, que el cash flow es un estado contable que presenta información 
         <div class="col-md-4">
             <h2>Tercer Paso</h2>
             <p>
-                
+                Ya con datos cargados y movimientos realizados podemos ver reportes en un intervalo de tiempo.Los mismo estan en 
+                el menu opcion "Reportes".
             <p>
-                <a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301950">Learn more &raquo;</a>
+                <a class="btn btn-default" href="#">Imprimir Reporte General &raquo;</a>
             </p>
         </div>
     </div>

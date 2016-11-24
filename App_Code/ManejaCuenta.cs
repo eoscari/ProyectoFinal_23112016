@@ -48,7 +48,7 @@ public class ManejaCuenta
                     bw.Write(cuent.SGDepBanc);
                     bw.Write(cuent.SGCuentaBanc);
                     bw.Write(cuent.SGCheqCobrados);
-                    bw.Write(cuent.SGCheqDebitados);
+                   
                     
                     return true;
                 }
@@ -80,9 +80,9 @@ public class ManejaCuenta
                 double DepositoBan = br.ReadDouble();
                 string CuentaB = br.ReadString();
                 double CheCob = br.ReadDouble();
-                double CheDeb = br.ReadDouble();
+                
 
-                return (new ClsCuenta(fondoDol, fondoPe, DepositoBan, CuentaB, CheCob, CheDeb));
+                return (new ClsCuenta(fondoDol, fondoPe, DepositoBan, CuentaB, CheCob));
             }
             else { return null; }
         }

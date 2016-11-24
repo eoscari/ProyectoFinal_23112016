@@ -19,7 +19,13 @@ public partial class Notas : System.Web.UI.Page
     protected void Unnamed14_Click(object sender, EventArgs e) //boton
     {
         l_notas.AbrirFichero(Server.MapPath(@"~/Archivos/Notas.bin"));
-        clsNota obj = new clsNota(i+1, Convert.ToString(TipoNota.Text), Convert.ToDouble(Monto.Text), Convert.ToDateTime(Fecha.Text));
+        string tipo;
+        int combo = ComboTipo.Items.IndexOf(ComboTipo.Items.FindByValue(ComboTipo.Text));
+        if (combo == 0) { tipo = "Credito"; }
+        else { tipo = "Debito"; }
+        double monto = double.Parse(Monto.Text);
+        DateTime fe = Convert.ToDateTime(Fecha.Text);
+        clsNota obj = new clsNota(i+1,tipo,monto,fe);
         l_notas.AgregarRegistro(obj);
         l_notas.CerrarFichero();
     }

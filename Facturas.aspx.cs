@@ -67,7 +67,7 @@ public partial class Facturas : System.Web.UI.Page
         else
             if (FechaEmi.Text != "" && FechaCobro.Text != "")
         {
-            clsFactura obj = new clsFactura(cli.Dni, Convert.ToDateTime(FechaEmi.Text), Convert.ToDateTime(FechaCobro.Text), "Propia", "Hola", 1, 1, 1);
+            clsFactura obj = new clsFactura(1, Convert.ToDateTime(FechaEmi.Text), Convert.ToDateTime(FechaCobro.Text), "Propia", "Hola", 1, 1, 1);
             lista.agregarRegistro(obj);
             Notas.Text = Convert.ToString(lista.Registro);
             lista.CerrarFichero();
